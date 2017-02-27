@@ -29,5 +29,12 @@ $(document).ready(function(){
         var randomStudent = students[Math.floor(Math.random() * students.length)];
         $("#studentDisplay").html(randomStudent + " is your student.");
     });
+    
+    $("#addStudentButton").click(function() {
+        var newStudent = $("#txtAddStudent").val();
+        console.log(newStudent);
+        students.push(newStudent);
+        $("#addStudentDisplay").html(newStudent + " added!")
+    })
 
 });
